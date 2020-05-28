@@ -5,22 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] float menuDelay = 3f;
+    [SerializeField] float screenChangeDelay = 3f;
+
+    int currentSceneIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartScreenDelay());
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentSceneIndex == 0)
+        {
+            StartCoroutine(StartScreenDelay());
+        }
     }
 
     IEnumerator StartScreenDelay()
     {
-        yield return new WaitForSeconds(menuDelay);
-        LoadMainMenu();
+        yield return new WaitForSeconds(screenChangeDelay);
+        LoadNextScene();
     }
     
-    private void LoadMainMenu()
+    public void LoadNextScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
