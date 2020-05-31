@@ -6,7 +6,7 @@ public class AttackerSpawner : MonoBehaviour
 {
     [SerializeField] float minSpawnTime = 1f;
     [SerializeField] float maxSpawnTime = 5f;
-    [SerializeField] Attacker attackerToSpawn = null;
+    [SerializeField] Attacker  attackerToSpawn = null;
 
     bool spawn = true;
 
