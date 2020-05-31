@@ -846,16 +846,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1509202739903448298, guid: e2100ee853646634999ad54c8735121d,
-        type: 3}
-      propertyPath: attackerToSpawn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509202739903448298, guid: e2100ee853646634999ad54c8735121d,
-        type: 3}
-      propertyPath: maxSpawnTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4342785089685291547, guid: e2100ee853646634999ad54c8735121d,
         type: 3}
       propertyPath: m_Name
@@ -864,12 +854,12 @@ PrefabInstance:
     - target: {fileID: 8915990444034342920, guid: e2100ee853646634999ad54c8735121d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8915990444034342920, guid: e2100ee853646634999ad54c8735121d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.93
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 8915990444034342920, guid: e2100ee853646634999ad54c8735121d,
         type: 3}
