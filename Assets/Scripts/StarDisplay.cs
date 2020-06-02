@@ -22,7 +22,7 @@ public class StarDisplay : MonoBehaviour
 
         UpdateDisplay();
     }
-
+    
     public void RemoveStars(int amount)
     {
         if (stars >= amount)
@@ -31,6 +31,10 @@ public class StarDisplay : MonoBehaviour
 
             UpdateDisplay();
         }
+    }
+    public bool HasEnoughStars(int amount)
+    {
+        return stars >= amount;
     }
 
     private void UpdateDisplay()
