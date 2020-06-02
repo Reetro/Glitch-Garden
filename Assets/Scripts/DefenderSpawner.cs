@@ -12,6 +12,8 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 spawnLocation)
     {
+        if (!defender) { return; }
+
         var newRotation = new Quaternion(0, 180, 0, 0);
 
         Defender newDefender = Instantiate(defender, spawnLocation, newRotation) as Defender;
