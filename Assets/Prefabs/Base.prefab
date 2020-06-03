@@ -70,4 +70,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a7b545057f1fc4a90a9968c8a0acd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToRemove: 0
+  healthToRemove: 1
