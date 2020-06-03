@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589c9a4b315cd5f4eab6a762176ab63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnTime: 1
+  minSpawnTime: 3
   maxSpawnTime: 5
-  attackerToSpawn: {fileID: 3578873757650974631, guid: 37b0fb528fd7aca4fa599beeca11b54d,
-    type: 3}
+  attackersToSpawn:
+  - {fileID: 8778630454423258316, guid: ce24948102b827446b3ece8d41f8c891, type: 3}
+  - {fileID: 3578873757650974631, guid: 37b0fb528fd7aca4fa599beeca11b54d, type: 3}

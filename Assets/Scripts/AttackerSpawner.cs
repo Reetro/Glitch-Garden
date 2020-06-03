@@ -6,7 +6,7 @@ public class AttackerSpawner : MonoBehaviour
 {
     [SerializeField] float minSpawnTime = 1f;
     [SerializeField] float maxSpawnTime = 5f;
-    [SerializeField] Attacker  attackerToSpawn = null;
+    [SerializeField] Attacker[] attackersToSpawn = null;
 
     bool spawn = true;
 
@@ -22,13 +22,9 @@ public class AttackerSpawner : MonoBehaviour
 
     private void SpawnAttacker()
     {
+        var attackerToSpawn = attackersToSpawn[Random.Range(0, attackersToSpawn.Length)];
+
         Attacker newAttaker = Instantiate(attackerToSpawn, transform.position, Quaternion.identity) as Attacker;
         newAttaker.transform.parent = transform;    
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
