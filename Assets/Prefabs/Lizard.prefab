@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0711d1b25f22241aa7b12799442908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 80
   deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
   VFXDuration: 1
 --- !u!1 &4386540507390296876
