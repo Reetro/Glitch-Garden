@@ -7,7 +7,6 @@ public class PlayerHealthDisplay : MonoBehaviour
     [SerializeField] int health = 5;
 
     TextMeshProUGUI textDisplay = null;
-    LevelLoader levelLoader = null;
 
     void Start()
     {
