@@ -22,7 +22,7 @@ public class PlayerHealthDisplay : MonoBehaviour
 
         if (health <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOver();
+            FindObjectOfType<LevelController>().HandelLose();
         }
     }
 

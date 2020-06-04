@@ -9,7 +9,6 @@ public class LevelLoader : MonoBehaviour
 
     int currentSceneIndex = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -25,6 +24,18 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(screenChangeDelay);
         LoadNextScene();
     }
+
+    public void RestartScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Main Menu");
+    }
     
     public void LoadNextScene()
     {
@@ -34,5 +45,10 @@ public class LevelLoader : MonoBehaviour
     public void LoadGameOver()
     {
         SceneManager.LoadScene("Game Over");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
