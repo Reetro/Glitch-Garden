@@ -27,4 +27,9 @@ public class AttackerSpawner : MonoBehaviour
         Attacker newAttaker = Instantiate(attackerToSpawn, transform.position, Quaternion.identity) as Attacker;
         newAttaker.transform.parent = transform;    
     }
+
+    public void StopSpawning()
+    {
+        spawn = false;
+    }
 }
