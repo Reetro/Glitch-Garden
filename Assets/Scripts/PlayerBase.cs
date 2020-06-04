@@ -20,6 +20,8 @@ public class PlayerBase : MonoBehaviour
         if (currentObject.GetComponent<Attacker>())
         {
             healthDisplay.RemoveHealth(healthToRemove);
+
+            Destroy(collision.gameObject);
         }
     }
 }
