@@ -51,4 +51,9 @@ public class LevelLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
 }
