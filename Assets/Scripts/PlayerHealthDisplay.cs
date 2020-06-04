@@ -4,12 +4,15 @@ using TMPro;
 
 public class PlayerHealthDisplay : MonoBehaviour
 {
-    [SerializeField] int health = 5;
+    [SerializeField] float baseLives = 3;
 
+    float Lives;
     TextMeshProUGUI textDisplay = null;
 
     void Start()
     {
+        Lives = baseLives - PlayerPrefsController.GetDifficulty();
+
         textDisplay = GetComponent<TextMeshProUGUI>();
 
         UpdateDisplay();
@@ -17,10 +20,10 @@ public class PlayerHealthDisplay : MonoBehaviour
 
     public void RemoveHealth(int amount)
     {
-        health -= amount;
+        Lives -= amount;
         UpdateDisplay();
 
-        if (health <= 0)
+        if (Lives <= 0)
         {
             FindObjectOfType<LevelController>().HandelLose();
         }
@@ -28,12 +31,12 @@ public class PlayerHealthDisplay : MonoBehaviour
 
     public void AddHealth(int amount)
     {
-        health += amount;
+        Lives += amount;
         UpdateDisplay();
     }
 
     public void UpdateDisplay()
     {
-        textDisplay.text = health.ToString();
+        textDisplay.text = Lives.ToString();
     }
 }
