@@ -22,7 +22,7 @@ public class PlayerHealthDisplay : MonoBehaviour
 
         if (health <= 0)
         {
-            LoadGameOver();
+            FindObjectOfType<LevelLoader>().LoadGameOver();
         }
     }
 
@@ -35,10 +35,5 @@ public class PlayerHealthDisplay : MonoBehaviour
     public void UpdateDisplay()
     {
         textDisplay.text = health.ToString();
-    }
-
-    public void LoadGameOver()
-    {
-        SceneManager.LoadScene("Game Over");
     }
 }
